@@ -1,16 +1,25 @@
 ```
 VULNCRYPT
 
-VulnCrypt is a command-line utility designed to analyze C code and generate an n-dimensional vulnerability prediction vector based on Common Weakness Enumeration (CWE) categories. Leveraging recurrent neural networks (RNNs), VulnCrypt processes code to predict the likelihood of various vulnerabilities being present. This project is heavily inspired by Project Achilles, which provides similar functionality for Java code.
+VulnCrypt is a command-line utility designed to analyze C code and generate an n-dimensional
+vulnerability prediction vector based on Common Weakness Enumeration (CWE) categories.
+Leveraging recurrent neural networks (RNNs), VulnCrypt processes code to predict the
+likelihood of various vulnerabilities being present. This project is heavily
+inspired by Project Achilles, which provides similar functionality for Java code.
 ```
 
 ```
 PURPOSE AND FUNCTIONALITY
 
-- Vulnerability Analysis: Detects potential vulnerabilities in C code, focusing on specific CWE types such as buffer overflows (CWE-119), resource management errors (CWE-399), and null pointer dereferences (CWE-476).
-- Machine Learning: Utilizes RNN models trained on labeled datasets to identify patterns associated with vulnerabilities.
-- Code Tokenization and Encoding: Transforms raw C code into tokenized sequences suitable for input into machine learning models.
-- Command-Line Interface: Offers a CLI for users to input C code files and receive vulnerability predictions.
+- Vulnerability Analysis: Detects potential vulnerabilities in C code, focusing on
+  specific CWE types such as buffer overflows (CWE-119), resource management errors
+  (CWE-399), and null pointer dereferences (CWE-476).
+- Machine Learning: Utilizes RNN models trained on labeled datasets to identify
+  patterns associated with vulnerabilities.
+- Code Tokenization and Encoding: Transforms raw C code into tokenized
+  sequences suitable for input into machine learning models.
+- Command-Line Interface: Offers a CLI for users to input C code files
+  and receive vulnerability predictions.
 ```
 
 ```
@@ -77,8 +86,12 @@ python cli.py path/to/your/code.c
 ```
 ACKNOWLEDGMENTS
 
-- Project Achilles: VulnCrypt was heavily inspired by Project Achilles. Project Achilles served as a reference and guide for developing VulnCrypt’s architecture, particularly in implementing the vulnerability prediction pipeline for programming languages.
-- Juliet Test Suite: The dataset used for training and evaluation is based on the Juliet Test Suite provided by NIST.
+- Project Achilles: VulnCrypt was heavily inspired by Project Achilles.
+  Project Achilles served as a reference and guide for developing VulnCrypt’s
+  architecture, particularly in implementing the vulnerability prediction
+  pipeline for programming languages.
+- Juliet Test Suite: The dataset used for training and evaluation
+  is based on the Juliet Test Suite provided by NIST.
 ```
 
 ```
@@ -104,9 +117,11 @@ TECHNICAL DETAILS
 - Model Architecture: Long Short-Term Memory (LSTM) networks
 - Data Processing:
   - Tokenization: Custom tokenizer for C code
-  - Encoding: Sequences are encoded using an integer mapping from a built vocabulary
+  - Encoding: Sequences are encoded using an integer mapping
+  from a built vocabulary
 - Input: Tokenized and encoded sequences of C code
-- Output: n-dimensional vulnerability prediction vector corresponding to selected CWE types
+- Output: n-dimensional vulnerability prediction vector corresponding
+  to selected CWE types
 ```
 
 ```
