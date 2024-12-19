@@ -20,3 +20,9 @@ models/
 .ipynb_checkpoints/
 
 
+
+predictions.json
+training_metrics.json
+vulncrypt_model.pth
+preprocessed.c
+
